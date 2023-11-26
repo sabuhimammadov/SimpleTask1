@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-dark">
+    <div class="d-flex  flex-column  align-items-center">
+
+        <h2 class=" text-danger text-center mt-3 mb-3">Welcome Form</h2>
+        <button type="button" class="btn btn-primary w-25" data-bs-toggle="modal" data-bs-target="#exampleModal">Add
+            Info</button>
+
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-center text-success" id="exampleModalLabel">Add Data</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex flex-column ">
+                        <div class=" d-flex justify-content-center mb-4">
+                            <input type="file" class="d-none" accept="image/*" id="picture"
+                                onchange="handleFileSelect(event)">
+                            <label for="picture"><span><img src="./assents//img/upload.svg" /><br />Your
+                                    image</span></label>
+                        </div>
+                        <div class="mb-3  text-danger">
+                            <label for="YourName" class="form-label">Your Name</label>
+                            <input type="text" class="form-control" id="YourName" placeholder="John Doe">
+                        </div>
+                        <div class="mb-3 text-danger">
+                            <label for="email" class="form-label">Your Email</label>
+                            <input type="text" class="form-control" id="email" placeholder="msebuhi040@gmail.com">
+                        </div>
+                        <div class="mb-3  text-danger">
+                            <label for="YourNote" class="form-label">Your Note</label>
+                            <textarea class="form-control" id="YourNote" rows="3" placeholder="Your Note"></textarea>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-primary w-100 " id="addInfo">Add Info</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="content" class="m-5 d-flex flex-wrap align-items-center gap-3">
+        <!-- <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <a href="#" class="btn btn-danger">Delete Card</a>
+            </div>
+        </div> -->
+      
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
